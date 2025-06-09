@@ -5,12 +5,15 @@ import { getAuth, type Auth } from "firebase/auth";
 // import { getFunctions, type Functions } from "firebase/functions";
 
 const firebaseConfig = {
-  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY || "YOUR_API_KEY",
-  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN || "YOUR_AUTH_DOMAIN",
-  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || "YOUR_PROJECT_ID",
-  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET || "YOUR_STORAGE_BUCKET",
-  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID || "YOUR_MESSAGING_SENDER_ID",
-  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID || "YOUR_APP_ID",
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY || "AIzaSyDQhfG2IIIIUlzL-eqD22CG_nX_UVN5Grc",
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN || "smartpool-yqhk2.firebaseapp.com",
+  databaseURL: process.env.NEXT_PUBLIC_FIREBASE_DATABASE_URL || "https://smartpool-yqhk2.firebaseio.com",
+  // projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || "smartpool-yqhk2",
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || "smartpool-yqhk2",
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET || "smartpool-yqhk2.appspot.com",
+  // messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID || "123456789012",
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID || "751047097131",
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID || "1:751047097131:web:9b2a264bf3eebb175da36e",
 };
 
 let app: FirebaseApp;
