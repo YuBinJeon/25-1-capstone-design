@@ -30,29 +30,28 @@ export default function DashboardPage() {
   };
 
   return (
-    <div className="space-y-6">
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <WaterLevelCard level={poolData.waterLevel} />
-        <TemperatureCard current={poolData.temperature} target={poolData.targetTemperature} />
-        <FiltrationCard filtrationData={poolData.filtration} />
-      </div>
-      
-      <div className="grid gap-6 md:grid-cols-2">
-        <RecentActivityCard activities={poolData.recentActivity} />
-        <AlertsSummaryCard alerts={poolData.alerts} />
-      </div>
-
-       {/* Example of a chart - could be temperature history or similar */}
-      <Card>
-        <CardHeader>
-          <CardTitle>Temperature History (Placeholder)</CardTitle>
-          <CardDescription>Shows temperature fluctuations over the last 24 hours.</CardDescription>
-        </CardHeader>
-        {/* Chart component would go here. For now, a placeholder. */}
-        <div className="p-6 h-64 flex items-center justify-center text-muted-foreground bg-muted/50 rounded-b-lg">
-          Chart Placeholder
-        </div>
-      </Card>
+  <div className="w-full max-w-screen-2xl mx-auto p-6 space-y-6">
+    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <WaterLevelCard level={poolData.waterLevel} />
+      <TemperatureCard current={poolData.temperature} target={poolData.targetTemperature} />
+      <FiltrationCard filtrationData={poolData.filtration} />
     </div>
-  );
+
+    <div className="grid gap-6 md:grid-cols-2">
+      <RecentActivityCard activities={poolData.recentActivity} />
+      <AlertsSummaryCard alerts={poolData.alerts} />
+    </div>
+
+    <Card>
+      <CardHeader>
+        <CardTitle>Temperature History (Placeholder)</CardTitle>
+        <CardDescription>Shows temperature fluctuations over the last 24 hours.</CardDescription>
+      </CardHeader>
+      <div className="p-6 h-64 flex items-center justify-center text-muted-foreground bg-muted/50 rounded-b-lg">
+        Chart Placeholder
+      </div>
+    </Card>
+  </div>
+);
+
 }
